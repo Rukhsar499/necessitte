@@ -22,9 +22,7 @@
   font-weight: 700;
   font-style: normal;
 }
-body {
-  overflow-x: hidden;
-}
+
 #nec{
 font-family: 'sailors-condensed';
 }
@@ -555,6 +553,7 @@ h6{
 .image-anime {
   position: relative;
   overflow: hidden;
+  z-index: 2;
 }
 .abhg{
   margin-bottom: 30px;
@@ -677,11 +676,35 @@ h6{
     font-size: 15px;
     color: #555;
   } 
-.form-image{
-  background-image: url(../img/banner-form.webp);
+.form-image {
+  background-image: url('../img/banner-form.webp');
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 100px 0;
   width: 100%;
-  height: auto;
-  padding: 50px 0px;
+  z-index: 1;
+}
+
+.form-image::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(12, 11, 11, 0.596); /* light overlay */
+  z-index: 1;
+}
+
+.form-image .bvx {
+  position: relative;
+  z-index: 2; /* To appear above overlay */
+  background: #F5F5DC;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
 }
 .detail-img {
   display: block;
@@ -762,6 +785,105 @@ h6{
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+.service-card {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-img-wrap {
+  position: relative;
+}
+
+.card-img-wrap img {
+  width: 100%;
+  display: block;
+}
+
+.card-content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 15px 20px;
+  transition: all 0.3s ease;
+}
+
+.card-header {
+  color: #000;
+ 
+  font-family: 'gilroy-regular' !important;
+  font-size: 18px;
+}
+
+.icon-btn {
+  background: #fff;
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+}
+
+.overlay-content {
+  display: none;
+  margin-top: 10px;
+}
+
+.view-btn {
+  background-color: #7E8D5C;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+/* Show overlay when active */
+.service-card.active .overlay-content {
+  display: block;
+   transition: all 0.3s ease;
+  
+}
+.fa-arrow-right{
+  margin: 5px 0px 0px 5px;
+
+}
+.shine-button {
+    margin-bottom: 10px;
+    display: inline-block;
+    padding: 15px 30px;
+    border: none;
+   background-color: #6C7D53;
+    color: #fff;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .1);
+    animation: 2s linear infinite shine;
+    margin-top: 20px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, .2), rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0));
+   
+}
+@keyframes shine {
+  0% {
+    background-position: -250px;
+  }
+
+  100% {
+    background-position: 250px;
+  }
+}
+.view{
+  padding: 7px 15px;
 }
 @media (min-width: 1200px) and (max-width: 1400px) {
   .bannerw {

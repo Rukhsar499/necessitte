@@ -36,8 +36,33 @@
   });
 
    
+ 
+    function toggleCard(btn) {
+    const card = btn.closest('.service-card');
+    const isActive = card.classList.contains('active');
 
+    // Remove active from all
+    document.querySelectorAll('.service-card').forEach(c => {
+      c.classList.remove('active');
+      const icon = c.querySelector('.icon-btn');
+      if (icon) icon.textContent = '＋';
+    });
 
+    // Activate current card if not already active
+    if (!isActive) {
+      card.classList.add('active');
+      btn.textContent = '−';
+    }
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.service-card').forEach(card => {
+      const icon = card.querySelector('.icon-btn');
+      if (icon) {
+        icon.textContent = card.classList.contains('active') ? '−' : '＋';
+      }
+    });
+  });
 
 
  

@@ -82,9 +82,10 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-5 col-md-5 col-12">
-          <div class="form">
-            <h5 class="text-center gft">
-              Time for a Makeover?</h5>
+          <div class="form bvx">
+            <h5 class="text-center gft ">
+              Your Aesthetic
+              Journey Awaits!</h5>
             <form action="">
               <div class="mb-4">
                 <input type="text" class="form-control" placeholder="Name" required>
@@ -109,7 +110,8 @@
               </div>
               <div class="mb-4">
                 <div class="">
-                  <button type="submit" class="btn btn-primary" style="background-color: #6C7D53;">Step Into
+                  <button type="submit" class="btn btn-primary shine-button" style="background-color: #6C7D53;">Step
+                    Into
                     Beauty</button>
                 </div>
               </div>
@@ -122,53 +124,94 @@
 
   <section class="mb">
     <div class="container">
-   <h2>Refine. Refresh. Rebook</h2>
+      <h2>Refine. Refresh. Rebook</h2>
       <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
         <li class="nav-item " role="presentation">
           <button class="nav-link nvads active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
-            type="button" role="tab" aria-controls="pills-home" aria-selected="true"><img
-              src="assets/img/achievement.png" alt="" class="me-3 qua">Skin</button>
+            type="button" role="tab" aria-controls="pills-home" aria-selected="true">Skin</button>
         </li>
         <li class="nav-item" role="presentation">
           <button class="nav-link nvads" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
-            type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><img src="assets/img/book.png"
-              alt="" class="me-3 qua">
+            type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
             Hair</button>
         </li>
 
         <li class="nav-item" role="presentation">
           <button class="nav-link nvads" id="pills-maintain-tab" data-bs-toggle="pill" data-bs-target="#pills-maintain"
-            type="button" role="tab" aria-controls="pills-maintain" aria-selected="false"><img
-              src="assets/img/spanner.png" alt="" class="me-3 qua">Laser</button>
+            type="button" role="tab" aria-controls="pills-maintain" aria-selected="false">Laser</button>
         </li>
       </ul>
       <div class="tab-content" id="pills-tabContent">
         <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
           tabindex="0">
-          <div class="row align-items-center">
-            <div class="col-lg-6 col-md-6 col-12">
-              <h3>Our Concept
-                Of Quality</h3>
-              <p>
-                The quality of our products and services is decisive for the efficiency of your
-                mobile machines or stationary applications. Therefore, our corporate culture focuses
-                on orienting all activities of our staff in a common direction: upward.
-              </p>
-              <p>
-                In the direction of leading positions in all areas: not only for the products and
-                processes but also in personnel development and operative performance. The
-                qualification, commitment and identification of our employees with our products and
-                services are very important for the continued success of our enterprise – success
-                that we can achieve only with a consistent and comprehensive concept of quality.
-              </p>
-            </div>
-            <div class="col-lg-6 col-md-6 col-12">
-              <div class="mission-vision-image">
-                <div class="image-anime">
-                  <img src="assets/img/mission-image.webp" alt="" class="img-fluid">
+          <div class="row g-4">
+
+            <!-- Card 1 -->
+            <div class="col-md-4">
+              <div class="service-card active">
+                <div class="card-img-wrap position-relative">
+                  <img src="assets/img/skin-concern.webp" class="img-fluid" alt="Skin Concern">
+                  <div class="card-content">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                      <h7 class="mb-0">Skin Concerns</h7>
+                      <button class="icon-btn" onclick="toggleCard(this)">−</button>
+                    </div>
+                    <div class="overlay-content">
+                      <p>At Necessitee Aesthetics, we see your struggles—acne, dullness, or fine lines. Our
+                        personalised,
+                        innovative treatments boost your confidence. Feel radiant, embraced, and transformed with every
+                        visit.</p>
+                      <button class="view-btn shine-button view">View More  <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-4">
+              <div class="service-card">
+                <div class="card-img-wrap position-relative">
+                  <img src="assets/img/skin-treatment.webp" class="img-fluid" alt="Skin Treatment">
+                  <div class="card-content">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                      <h7 class="mb-0">Skin Concerns</h7>
+                      <button class="icon-btn" onclick="toggleCard(this)">−</button>
+                    </div>
+                    <div class="overlay-content">
+                      <p>At Necessitee Aesthetics, we see your struggles—acne, dullness, or fine lines. Our
+                        personalised,
+                        innovative treatments boost your confidence. Feel radiant, embraced, and transformed with every
+                        visit.</p>
+                      <button class="view-btn shine-button view">View More  <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-4">
+              <div class="service-card">
+                <div class="card-img-wrap position-relative">
+                  <img src="assets/img/medificial.webp" class="img-fluid" alt="Medi Facial">
+                  <div class="card-content">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                      <h7 class="mb-0">Skin Concerns</h7>
+                      <button class="icon-btn" onclick="toggleCard(this)">−</button>
+                    </div>
+                    <div class="overlay-content">
+                      <p>At Necessitee Aesthetics, we see your struggles—acne, dullness, or fine lines. Our
+                        personalised,
+                        innovative treatments boost your confidence. Feel radiant, embraced, and transformed with every
+                        visit.</p>
+                      <button class="view-btn shine-button view">View More  <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
         <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
@@ -201,58 +244,60 @@
     </div>
   </section>
 
-<section id="choose">
-        <div class="container">
-            <h2 style="color:#fff;">Why Choose Us</h2>
-            <p style="color:#fff;">Our clinic, located in the heart of Gurugram, combines luxurious, peaceful surroundings that exude cosiness, warmth, and elegance with FDA-approved, scientifically validated technologies. You feel at home immediately in a setting that is both intimate and professional.</p>
-            <div class="row mt-5">
-                <div class="col-lg-3">
-                    <div class="choose-boxone">
-                        <h2>01</h2>
-                        <p class="mb-3">Personalised <br />Care</p>
-                        <div class=" mb-4">
-                            <img src="under-bg.png" alt="">
-                        </div>
-                        <p>We listen to your skin’s story, crafting treatments that heal and uplift your unique glow.</p>
-                    </div>
-
-                </div>
-                <div class="col-lg-3">
-                    <div class="choose-boxtwo">
-                        <h2>02</h2>
-                        <p class="mb-3">Luxurious <br />Comfort</p>
-                        <div class=" mb-4">
-                            <img src="under-bg.png" alt="">
-                        </div>
-                        <p>Our Gurugram clinic wraps you in warmth, making every visit feel like home.</p>
-                    </div>
-
-                </div>
-                <div class="col-lg-3">
-                    <div class="choose-boxone">
-                        <h2>03</h2>
-                        <p class="mb-3">Advanced <br />Technology</p>
-                        <div class=" mb-4">
-                            <img src="under-bg.png" alt="">
-                        </div>
-                        <p> We use FDA-approved tools to deliver safe, effective results tailored to your needs.</p>
-                    </div>
-
-                </div>
-                <div class="col-lg-3">
-                    <div class="choose-boxtwo">
-                        <h2>04</h2>
-                        <p class="mb-3">Trusted <br />Partners</p>
-                        <div class=" mb-4">
-                            <img src="under-bg.png" alt="">
-                        </div>
-                        <p>We’re with you every step, ensuring you feel seen, heard, and confident needs.</p>
-                    </div>
-
-                </div>
+  <section id="choose">
+    <div class="container">
+      <h2 style="color:#fff;">Why Choose Us</h2>
+      <p style="color:#fff;">Our clinic, located in the heart of Gurugram, combines luxurious, peaceful surroundings
+        that exude cosiness, warmth, and elegance with FDA-approved, scientifically validated technologies. You feel at
+        home immediately in a setting that is both intimate and professional.</p>
+      <div class="row mt-5">
+        <div class="col-lg-3">
+          <div class="choose-boxone">
+            <h2>01</h2>
+            <p class="mb-3">Personalised <br />Care</p>
+            <div class=" mb-4">
+              <img src="under-bg.png" alt="">
             </div>
+            <p>We listen to your skin’s story, crafting treatments that heal and uplift your unique glow.</p>
+          </div>
+
         </div>
-    </section>
+        <div class="col-lg-3">
+          <div class="choose-boxtwo">
+            <h2>02</h2>
+            <p class="mb-3">Luxurious <br />Comfort</p>
+            <div class=" mb-4">
+              <img src="under-bg.png" alt="">
+            </div>
+            <p>Our Gurugram clinic wraps you in warmth, making every visit feel like home.</p>
+          </div>
+
+        </div>
+        <div class="col-lg-3">
+          <div class="choose-boxone">
+            <h2>03</h2>
+            <p class="mb-3">Advanced <br />Technology</p>
+            <div class=" mb-4">
+              <img src="under-bg.png" alt="">
+            </div>
+            <p> We use FDA-approved tools to deliver safe, effective results tailored to your needs.</p>
+          </div>
+
+        </div>
+        <div class="col-lg-3">
+          <div class="choose-boxtwo">
+            <h2>04</h2>
+            <p class="mb-3">Trusted <br />Partners</p>
+            <div class=" mb-4">
+              <img src="under-bg.png" alt="">
+            </div>
+            <p>We’re with you every step, ensuring you feel seen, heard, and confident needs.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 
