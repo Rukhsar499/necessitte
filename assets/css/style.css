@@ -22,7 +22,358 @@
   font-weight: 700;
   font-style: normal;
 }
+.navbar {
+    max-width: 70%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+    position: fixed;
+    top: 20px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    margin: 0 auto;
+    padding: 1.5rem 1.2rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
 
+.navbar .dropdown-toggle {
+    transition: all 0.3s ease;
+}
+
+.navbar .dropdown-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-nav .nav-link {
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f8f9fa;
+}
+
+.navbar-nav .nav-link.active {
+    color: #fff;
+    font-weight: 600;
+}
+.tilt-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f7f7f7;
+}
+
+.tilt-container {
+  perspective: 1000px;
+}
+
+.tilt-image {
+  width: 300px;
+  transition: transform 0.1s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+/* Logo Styling */
+.navbar-brand img {
+    max-height: 80px;
+    filter: drop-shadow(1px 1px 4px rgba(0,0,0,0.6));
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover img {
+    transform: scale(1.05);
+}
+
+/* Appointment Button */
+.btn-appointment {
+    display: inline-flex;
+    align-items: center;
+    color: #000 !important;
+    background-color: #FFF;
+    padding: 8px 18px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-appointment:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.btn-appointment::before {
+    content: " ";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url('./book.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 0;
+}
+
+.dropdown-item {
+    color: white !important;
+    padding: 0.5rem 1.5rem;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Glass Morphism Offcanvas Menu */
+.glass-menu {
+    background: rgba(0, 0, 0, 0.267) !important; /* Base color with transparency */
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border-left: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.glass-menu .offcanvas-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 1rem;
+}
+
+.glass-menu .offcanvas-title {
+    color: white;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.glass-menu .nav-link {
+    color: white !important;
+    padding: 0.75rem 1rem !important;
+    margin: 0.25rem 0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.glass-menu .nav-link:hover,
+.glass-menu .nav-link:focus {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(4px);
+}
+
+.glass-menu .nav-link.active {
+    background: rgba(255, 255, 255, 0.25);
+    font-weight: 600;
+}
+
+/* Enhanced Offcanvas Dropdown UI */
+.glass-menu .dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding-right: 2rem !important;
+}
+
+.glass-menu .dropdown-toggle::after {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+    border-width: 0 2px 2px 0;
+    border-color: white;
+    width: 8px;
+    height: 8px;
+    transform-origin: 75% 50%;
+}
+
+.glass-menu .dropdown-toggle[aria-expanded="true"]::after {
+    transform: translateY(-50%) rotate(-135deg);
+}
+
+.glass-menu .dropdown-menu {
+    background: rgba(0, 0, 0, 0.4) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    margin: 0.5rem 0 0 1rem !important;
+    border-radius: 6px !important;
+    overflow: hidden;
+    transform-origin: top;
+    animation: dropdownFadeIn 0.3s ease-out forwards;
+    opacity: 0;
+    transform: scaleY(0.8);
+}
+
+@keyframes dropdownFadeIn {
+    to {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+
+.glass-menu .dropdown-item {
+    padding: 0.8rem 1.5rem !important;
+    position: relative;
+    transition: all 0.25s ease;
+    border-left: 3px solid transparent;
+}
+
+.glass-menu .dropdown-item:hover,
+.glass-menu .dropdown-item:focus {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-left: 3px solid rgba(255, 255, 255, 0.4);
+    padding-left: 1.8rem !important;
+}
+
+.glass-menu .dropdown-item:active {
+    background: rgba(255, 255, 255, 0.25) !important;
+}
+
+.glass-menu .dropdown-divider {
+    border-color: rgba(255, 255, 255, 0.1);
+    margin: 0.25rem 0;
+}
+
+/* Nested dropdown indicator */
+.glass-menu .dropdown-item.has-children {
+    position: relative;
+    padding-right: 2.5rem !important;
+}
+
+.glass-menu .dropdown-item.has-children::after {
+    content: "→";
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.7;
+    font-size: 1rem;
+}
+
+/* Improved dropdown positioning */
+.dropdown-menu-end {
+    right: 0;
+    left: auto !important;
+}
+
+/* Mobile-specific dropdown improvements */
+@media (max-width: 992px) {
+    .glass-menu .dropdown-menu {
+        margin-left: 0.5rem !important;
+        width: calc(100% - 1rem);
+    }
+    
+    .glass-menu .dropdown-item {
+        padding: 0.7rem 1.25rem !important;
+    }
+    
+    .glass-menu .dropdown-item:hover {
+        padding-left: 1.5rem !important;
+    }
+}
+
+/* Enhanced Appointment Button in Menu */
+.glass-menu .btn-appointment {
+    background: rgba(255, 255, 255, 0.9) !important;
+    color: #6C7D53 !important;
+    font-weight: 600;
+    margin-top: 1rem;
+    padding: 0.75rem !important;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+
+.glass-menu .btn-appointment:hover {
+    background: white !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2) !important;
+}
+
+/* Smooth open/close animation */
+.offcanvas {
+    transition: transform 0.3s ease-in-out, backdrop-filter 0.3s ease !important;
+}
+
+/* Mobile Styles */
+@media (max-width: 992px) {
+    .navbar {
+        max-width: 100%;
+        border-radius: 0;
+        top: 0;
+        backdrop-filter: none;
+        background-color: #6C7D53;
+        padding: 1rem !important;
+    }
+
+    .navbar-brand {
+        margin-right: auto; /* Push logo to left */
+    }
+
+    .navbar-toggler {
+        border-color: rgba(255,255,255,0.5);
+        margin-left: auto; /* Push button to right */
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    .btn-appointment {
+        width: 100%;
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+}
+
+/* Desktop Layout */
+@media (min-width: 992px) {
+    .navbar > .container-fluid {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    
+    /* Center the logo */
+    .navbar-brand {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    /* Left menu */
+    .d-none.d-lg-flex:first-child {
+        width: 50%;
+        justify-content: flex-end;
+        padding-right: 180px; /* Adjust based on logo width */
+    }
+    
+    /* Right menu */
+    .d-none.d-lg-flex:last-child {
+        width: 50%;
+        justify-content: flex-start;
+        padding-left: 180px; /* Adjust based on logo width */
+    }
+}
 #nec{
 font-family: 'sailors-condensed';
 }
@@ -571,6 +922,25 @@ h6{
    width: 100%;
   height: 100%;
   z-index: 1;
+}
+.refresh {
+  position: relative;
+  z-index: 2; /* ensure content is above background image */
+}
+
+.refresh::after {
+    content: '';
+    position: absolute;
+    bottom: -8%;
+    right: 0%;
+    width: 500px;
+    height: 500px;
+    background-image: url(../img/leacs.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom right;
+    z-index: 1;
+    pointer-events: none;
 }
 #choose {
     background-color: #6C7D53;
